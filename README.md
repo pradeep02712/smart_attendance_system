@@ -101,8 +101,6 @@ Follow the steps below to set up the project locally:
 
 ## 🖥️ **Screenshots**
 
-![Screenshot 1](https://via.placeholder.com/600x400)
-*Admin Panel View*
 
-![Screenshot 2](https://via.placeholder.com/600x400)
-*Student Attendance Dashboard*
+
+
