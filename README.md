@@ -33,7 +33,7 @@ The **Smart Attendance System** automates attendance marking using **Facial Reco
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/mahkkk04/Smart-attendance-using-facial-recognition.git
+    git clone https://github.com/pradeep02712/smart_attendance_system.git
     cd smart-attendance-system
     ```
 
