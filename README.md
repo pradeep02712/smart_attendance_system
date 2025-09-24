@@ -21,7 +21,7 @@ Pip
 Steps to Run Locally:
 Clone the repository:
 
-git clone [gh repo clone pradeep02712/smart_attendance_system](https://github.com/pradeep02712/smart_attendance_system.git)
+git clone https://github.com/mahkkk04/Smart-attendance-using-facial-recognition.git
 cd smart-attendance-system
 Create and activate a virtual environment:
 
