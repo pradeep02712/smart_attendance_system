@@ -1,106 +1,59 @@
-# smart_attendance_system
+Smart Attendance System Using Facial Recognition
+📖 Project Overview
+The Smart Attendance System automates attendance marking using Facial Recognition. Students' faces are detected from uploaded images, and attendance is recorded in Excel and PDF formats. This system reduces manual errors and saves time.
 
-## 📖 **Project Overview**
+Key Features
+Automatic attendance marking from images.
+Face recognition using Facenet (MTCNN + InceptionResnetV1).
+Attendance records saved in Excel and downloadable as PDF.
+Streamlit web interface for easy interaction.
+Temporary image handling and training of new models.
+⚙️ Tech Stack
+Backend & Interface: Python, Streamlit
+Machine Learning: PyTorch, Facenet-PyTorch
+Image Processing: OpenCV, PIL
+Data Handling: Pandas, NumPy
+PDF Generation: ReportLab, FPDF
+🔧 Installation & Setup
+Prerequisites:
+Python 3.8+
+Pip
+Steps to Run Locally:
+Clone the repository:
 
-The **Smart Attendance Manager** is an innovative system built using **Facial Recognition Technology** to automate the process of taking attendance. The system uses real-time facial recognition to mark attendance, making the process more accurate and efficient. This eliminates manual errors and saves time. 
+git clone https://github.com/mahkkk04/Smart-attendance-using-facial-recognition.git
+cd smart-attendance-system
+Create and activate a virtual environment:
 
-### **Key Features:**
-- Real-time facial recognition for attendance tracking.
-- Automatic marking of attendance based on face detection.
-- Admin interface for managing student records.
-- Attendance reports and analytics.
-- Integration with a database to track attendance over time.
-- Easy to deploy and use.
+python -m venv venv
+On Windows:
+venv\Scripts\activate
+On macOS/Linux:
+source venv/bin/activate
+Install dependencies:
 
----
+pip install -r requirements.txt
+Run the Streamlit app:
 
-## ⚙️ **Tech Stack**
+streamlit run streamlit_app.py
+Access the app: Open your browser at http://localhost:8501.
 
-- **Backend**: Python (Flask/Django)
-- **Frontend**: HTML, CSS, JavaScript (optional: React for dynamic UI)
-- **Machine Learning**: OpenCV, Dlib, Face Recognition
-- **Database**: SQLite/MySQL/PostgreSQL
-- **Libraries**:
-  - **Face Recognition** (for facial recognition)
-  - **OpenCV** (for image processing)
-  - **Flask/Django** (for web server)
-  - **NumPy** and **Pandas** (for data handling)
-
----
-
-## 🔧 **Installation & Setup**
-
-Follow the steps below to set up the project locally:
-
-### Prerequisites:
-- Python 3.x+
-- Pip (Python package installer)
-
-### Steps to Run Locally:
-
-1. **Clone the repository**:
-    ```bash
-    git clone https://github.com/mahaklachhwani-0412/smart-attendance-manager.git
-    cd smart-attendance-manager
-    ```
-
-2. **Create a virtual environment**:
-    ```bash
-    python -m venv venv
-    ```
-
-3. **Activate the virtual environment**:
-    - On Windows:
-      ```bash
-      venv\Scripts\activate
-      ```
-    - On macOS/Linux:
-      ```bash
-      source venv/bin/activate
-      ```
-
-4. **Install dependencies**:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-5. **Set up the database**:
-    ```bash
-    python manage.py migrate  # For Django
-    ```
-
-6. **Start the application**:
-    ```bash
-    python app.py  # For Flask
-    ```
-
-7. **Access the app**:
-    Open your browser and go to `http://localhost:5000` (or the respective port).
-
----
-
-## 📸 **Usage**
-
-### **For Admins**:
-- **Enroll Students**: 
-  - Capture student faces by selecting the **"Enroll Student"** option from the Admin Panel. 
-  - The system will save the student's face for later recognition.
-
-- **View Attendance**: 
-  - Admin can access detailed reports of attendance for each student over specific periods.
-
-### **For Students**:
-- **Mark Attendance**: 
-  - The system will automatically mark attendance based on the detected face when the student enters the camera frame.
-
-- **View Attendance**: 
-  - Students can view their individual attendance status from the system’s dashboard.
-
----
-
-
-## 🖥️ **Screenshots**
-
-
-
-
+📸 Usage
+Train Model
+Upload or place images of registered students in registered_faces/.
+Go to "Train Model" in the sidebar and click "Train Now" to update embeddings.
+Mark Attendance
+Upload student images via "Mark Attendance".
+Click "Mark Attendance" to detect faces and save attendance.
+Temporary images are cleared using "Clear Uploaded Images".
+Download Attendance PDF
+Go to "Download Attendance PDF".
+Select the Excel attendance file and download it as a PDF.
+🗂️ Folder Structure
+registered_faces/ # Contains student face images
+Attendance/ # Generated Excel attendance sheets
+reports/ # Generated PDF reports
+streamlitapp.py # Main Streamlit app
+attendance_system.py # Face recognition & attendance logic
+train_model.py # Model training logic
+train_config.yml # Training configuration
